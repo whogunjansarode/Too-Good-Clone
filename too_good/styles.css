@@ -11,6 +11,82 @@
 html,body{
     height: 100%;
     width: 100%;
+    background-color: #f7f7f7;
+    
+}
+
+#nav{
+
+    width: 100%;
+    /* background-color: burlywood; */
+    position: fixed;
+    z-index: 99;
+    padding: 25px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+} 
+
+#nav{
+    height: 100px;
+    width: 100%;
+    /* background-color: blanchedalmond; */
+    position: fixed;
+    z-index: 99;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+#nav-part1{
+    /* background-color: red; */
+    height: 82px;
+    overflow: hidden;
+}
+
+#nav-part1 svg{
+   display: block;
+}
+#nav #nav-part2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+#links{
+    padding: 10px;
+}
+#nav-part2 #links a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 14px;
+
+    margin: 0 20px;
+
+}
+
+#icons{
+    padding: 10px;
+    border-radius: 50px;
+    background-color: #fff;
+}
+
+#nav-part2 #icons i{
+    font-size: 18px;
+    margin: 0 20px;
+    font-weight: 100;
+}
+
+#cursor{
+    height: 150px;
+    width: 150px;
+    background-color: rgba(224, 139, 189, 0.814);
+    border-radius: 50%;
+    position: fixed;
+    transform: translate(-50%,-50%);
 }
 
 #page1{
@@ -56,7 +132,7 @@ html,body{
     scale: 0;
 }
 
-#page2{
+#page2 {
     min-height: 100vh;
     width: 100%;
     position: relative;
@@ -66,35 +142,113 @@ html,body{
     justify-content: space-between;
 }
 
-#page2 .elem{
+#page2 .elem {
     height: 100%;
     width: 31%;
     /* background-color: red; */
     overflow: hidden;
-
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-#page2 .elem img{
+#page2 .elem img {
     height: 100%;
     width: 100%;
     object-fit: cover;
     scale: 1.1;
 }
 
-#page2 .elem .dets{
-    height: 50px;
-    width: 20%;
+#page2 .elem .dets {
+    height: 60px;
     border-radius: 50px;
+    width: 70%;
     position: absolute;
     z-index: 9;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: palegoldenrod;
+    background-color: rgb(229, 156, 186);
+}
 
+#page3{
+    min-height: 120vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.child{
+    height: 55vh;
+    width: 40vw;
+    /* background-color: red;
+    border: 2px solid #000; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.child img{
+    height: 100%;
 }
 
 @media (max-width:600px) {
+
+    #nav{
+        height: 100px;
+        width: 100%;
+        /* background-color: blanchedalmond; */
+        position: fixed;
+        z-index: 99;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 15px;
+    }
+    
+    #nav-part1{
+        /* background-color: red; */
+        height: 67px;
+        overflow: hidden;
+    }
+    
+    #nav-part1 svg{
+       display: block;
+       height: 67px;
+       width: 80px;
+    }
+
+     #nav #twogoodlogo{
+        height: 40px;
+        margin-left: -20px;
+     }
+    #nav #nav-part2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+    }
+    #links{
+        padding: 10px;
+        display: none;
+    }
+    
+    
+    #icons{
+        padding: 7px;
+        border-radius: 50px;
+        background-color: #fff;
+    }
+    
+    #nav-part2 #icons i{
+        font-size: 18px;
+        margin: 0 20px;
+        font-weight: 100;
+    }
+    
+
     #page1{
         width: 100%;
         padding: 0 3vw;
@@ -138,5 +292,38 @@ html,body{
         /* background-color: red; */
         overflow: hidden;
         margin-bottom: 3vw;
+    }
+    #page2 .elem .dets {
+        height: 40px;
+        border-radius: 50px;
+        width: 70%;
+        position: absolute;
+        z-index: 9;
+        background-color: rgb(229, 156, 186);
+    }
+    #page3{
+        min-height: 120vh;
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    
+    .child{
+        height: 54vh;
+        width: 88vw;
+        /* background-color: red;
+        border: 2px solid #000; */
+        position: relative;
+        padding: 15vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .child img{
+        height: 100%;
     }
 }
